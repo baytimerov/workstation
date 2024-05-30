@@ -1,0 +1,402 @@
+
+/* Setting properties */
+
+SET NAMES WIN1251;
+SET SQL DIALECT 3;
+CONNECT 'localhost/3050:C:/TST.FDB' USER 'SYSDBA' PASSWORD 'masterkey';
+SET AUTODDL ON;
+
+/* ----- Creating Tables ----- */
+
+/* DOCS */
+CREATE TABLE DOCS (
+    ID_PERSON VARCHAR(10) NOT NULL,
+    NDOC VARCHAR(30));
+
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'17',
+	'док1'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'17',
+	'док2'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'16',
+	'док2'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'16',
+	'док1'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'15',
+	'док1'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'15',
+	'док2'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'15',
+	'док3'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'14',
+	'док3'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'14',
+	'док2'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'13',
+	'док2'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'13',
+	'док3'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'13',
+	'док4'
+);
+
+INSERT INTO PERSON (
+	ID_PERSON,
+	NDOC
+) VALUES (
+	'13',
+	'док5'
+);
+
+
+
+/* PERSON */
+CREATE TABLE PERSON (
+    ID INTEGER NOT NULL,
+    LAST_NAME VARCHAR(30),
+    FIRST_NAME VARCHAR(30),
+    SUR_NAME VARCHAR(30),
+    BIRTHDAY DATE,
+    UDATE TIMESTAMP DEFAULT 'now');
+
+
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	2,
+	'Петров',
+	'Иван',
+	'Сергеевич',
+	'1990-05-30',
+	'2024-05-30 22:04:52.846'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	3,
+	'Иванов',
+	'Петр',
+	'Сергеевич',
+	'1990-05-30',
+	'2024-05-30 22:05:52.451'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	4,
+	'Сергеев',
+	'Петр',
+	'Иванович',
+	'1990-05-30',
+	'2024-05-30 22:06:12.014'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	5,
+	'Петров',
+	'Сергей',
+	'Иванович',
+	'1990-05-30',
+	'2024-05-30 22:06:25.910'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	6,
+	'Иванов',
+	'Сергей',
+	'Петрович',
+	'1990-05-30',
+	'2024-05-30 22:07:29.452'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	8,
+	'Сергеев',
+	'Иван',
+	'Петрович',
+	'1990-05-30',
+	'2024-05-30 22:10:22.755'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	9,
+	'Сергеев',
+	'Николай',
+	'Петрович',
+	'1990-05-30',
+	'2024-05-30 22:11:17.940'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	10,
+	'Сергеев',
+	'Петр',
+	'Николаевич',
+	'1990-05-30',
+	'2024-05-30 22:11:27.670'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	11,
+	'Николаев',
+	'Петр',
+	'Сергеевич',
+	'1990-05-30',
+	'2024-05-30 22:11:40.594'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	12,
+	'Николаев',
+	'Петр',
+	'Иванович',
+	'1990-05-30',
+	'2024-05-30 22:11:46.025'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	13,
+	'Николаев',
+	'Иван',
+	'Петрович',
+	'1990-05-30',
+	'2024-05-30 22:11:56.710'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	14,
+	'Иванов',
+	'Николай',
+	'Петрович',
+	'1990-05-30',
+	'2024-05-30 22:13:59.796'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	15,
+	'Иванов',
+	'Николай',
+	'Сергеевич',
+	'1990-05-30',
+	'2024-05-30 22:14:06.887'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	16,
+	'Петров',
+	'Николай',
+	'Сергеевич',
+	'1990-05-30',
+	'2024-05-30 22:14:32.215'
+);
+
+INSERT INTO PERSON (
+	ID,
+	LAST_NAME,
+	FIRST_NAME,
+	SUR_NAME,
+	BIRTHDAY,
+	UDATE
+) VALUES (
+	17,
+	'Петров',
+	'Николай',
+	'Иванович',
+	'1990-05-30',
+	'2024-05-30 22:14:36.406'
+);
+
+
+
+/* ----- Creating Sequences ----- */
+
+/* GEN_ID_PERSON */
+CREATE OR ALTER SEQUENCE GEN_ID_PERSON START WITH 0 INCREMENT BY 1;
+
+/* ----- Creating Triggers for Table stubs ----- */
+
+/* PERSON_BI (STUB) */
+SET TERM ^;
+CREATE OR ALTER TRIGGER PERSON_BI
+	FOR PERSON BEFORE INSERT
+AS BEGIN END^
+
+SET TERM ;^
+
+/* ----- Creating Triggers for Table ----- */
+
+/* PERSON_BI */
+SET TERM ^;
+CREATE OR ALTER TRIGGER PERSON_BI FOR PERSON
+ACTIVE BEFORE INSERT POSITION 0
+AS
+BEGIN
+IF (NEW.ID IS NULL) THEN
+NEW.ID = GEN_ID(GEN_ID_person,1);
+END^
+SET TERM ;^
